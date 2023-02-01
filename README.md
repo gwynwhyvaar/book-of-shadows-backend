@@ -1,2 +1,2 @@
 # vaalian-db
-A simple time series db written in c# and with microsoft orleans backend
+A simple backend service in ms orlearns (will contain a time series db in future) written in c#.
