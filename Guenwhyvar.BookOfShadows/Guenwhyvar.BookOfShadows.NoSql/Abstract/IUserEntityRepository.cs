@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Guenwhyvar.BookOfShadows.NoSql.Entities;
 
 namespace Guenwhyvar.BookOfShadows.NoSql.Abstract
 {
-    internal class IUserEntityRepository
+    public interface IUserEntityRepository
     {
+        Task<UserEntity> GetByUserNameAsync(string userName);
+        Task<UserEntity> GetByUserBySelfUrlAsync(string selfUrl);
+        Task<UserEntity> GetByUserNameAndPasswordAsync(string userName, byte[] password);
+        Task AddUserEntityAsync(UserEntity entity);
+        Task DeleteUserEntityAsync(string userName);
+        Task UpdateUserEntityAsync(string userName, UserEntity entity);
     }
 }

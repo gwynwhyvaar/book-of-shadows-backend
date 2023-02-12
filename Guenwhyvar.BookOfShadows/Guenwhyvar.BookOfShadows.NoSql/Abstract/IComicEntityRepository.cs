@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Guenwhyvar.BookOfShadows.NoSql.Entities;
 
 namespace Guenwhyvar.BookOfShadows.NoSql.Abstract
 {
-    internal class IComicEntityRepository
+    public interface IComicEntityRepository
     {
+        Task<ComicEntity> GetComicEntityAsync(string blogId);
+        Task<ComicEntity> GetComicEntityBySelfUrlAsync(string selfUlr);
+        Task<List<ComicEntity>> GetAllComicEntitiesAsync(string tag);
+        Task<List<ComicEntity>> GetAllComicEntitiesAsync(string tag, string userName);
+        Task<string> AddComicEntity(ComicEntity ComicEntity);
+        Task DeleteComicEntityAsync(string blogId);
+        Task UpdateComicEntityAsync(string blogId, ComicEntity ComicEntity);
+        Task<List<ComicEntity>> GetAllComicEntitiesByUserNameAsync(string userName);
+        Task<List<string>> GetAllTagsAsync(string userName);
     }
 }

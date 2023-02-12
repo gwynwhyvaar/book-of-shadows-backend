@@ -14,8 +14,8 @@ namespace Guenwhyvar.BookOfShadows.NoSql.Entities
         public string ProfilePictureUrl { get; set; }
         public int Blogs { get; set; }
         public int Comics { get; set; }
-        public string[] Links { get; set; }
-        public string[] Images { get; set; }
-        public string[] Files { get; set; }
+        public List<string> ReferencedBlogLinks { get; set; }
+        public List<string> ReferencedBlogImageLinks { get; set; }
+        public List<string> UploadedFiles { get; set; }
     }
 }
