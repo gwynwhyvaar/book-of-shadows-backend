@@ -1,4 +1,4 @@
-﻿#nullable disable 
+﻿#nullable disable
 using Guenwhyvar.BookOfShadows.NoSql.Abstract;
 namespace Guenwhyvar.BookOfShadows.NoSql.Settings
 {
