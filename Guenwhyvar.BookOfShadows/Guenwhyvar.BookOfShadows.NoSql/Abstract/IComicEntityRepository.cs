@@ -8,7 +8,7 @@ namespace Guenwhyvar.BookOfShadows.NoSql.Abstract
         Task<ComicEntity> GetComicEntityBySelfUrlAsync(string selfUlr);
         Task<List<ComicEntity>> GetAllComicEntitiesAsync(string tag);
         Task<List<ComicEntity>> GetAllComicEntitiesAsync(string tag, string userName);
-        Task<string> AddComicEntity(ComicEntity ComicEntity);
+        Task AddComicEntityAsync(ComicEntity ComicEntity);
         Task DeleteComicEntityAsync(string blogId);
         Task UpdateComicEntityAsync(string blogId, ComicEntity ComicEntity);
         Task<List<ComicEntity>> GetAllComicEntitiesByUserNameAsync(string userName);

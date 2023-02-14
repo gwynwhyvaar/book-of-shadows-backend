@@ -1,38 +1,28 @@
 ﻿using Guenwhyvar.BookOfShadows.NoSql.Abstract;
 using Guenwhyvar.BookOfShadows.NoSql.Entities;
 
+using MongoDB.Driver;
+
 namespace Guenwhyvar.BookOfShadows.NoSql.Repositories
 {
     public sealed class UserEntityRepository : IUserEntityRepository
     {
-        public Task AddUserEntityAsync(UserEntity entity)
+        private readonly IMongoCollection<UserEntity> _db;
+        public UserEntityRepository(IDatabaseSettings databaseSettings)
         {
-            throw new NotImplementedException();
+            var dataBase = new MongoClient(databaseSettings.ConnectionString).GetDatabase(databaseSettings.DatabaseName);
+            _db = dataBase.GetCollection<UserEntity>(typeof(UserEntity).FullName);
         }
+        public Task AddUserEntityAsync(UserEntity entity) => _db.InsertOneAsync(entity);
 
-        public Task DeleteUserEntityAsync(string userName)
-        {
-            throw new NotImplementedException();
-        }
+        public Task DeleteUserEntityAsync(string userName) => _db.DeleteOneAsync(x => x.UserName == userName);
 
-        public Task<UserEntity> GetByUserBySelfUrlAsync(string selfUrl)
-        {
-            throw new NotImplementedException();
-        }
+        public Task<UserEntity> GetByUserBySelfUrlAsync(string selfUrl) => _db.Find(x => x.SelfUrl == selfUrl).FirstOrDefaultAsync();
 
-        public Task<UserEntity> GetByUserNameAndPasswordAsync(string userName, byte[] password)
-        {
-            throw new NotImplementedException();
-        }
+        public Task<UserEntity> GetByUserNameAndPasswordAsync(string userName, byte[] password) => _db.Find(x => x.UserName == userName && x.Password == password).FirstOrDefaultAsync();
 
-        public Task<UserEntity> GetByUserNameAsync(string userName)
-        {
-            throw new NotImplementedException();
-        }
+        public Task<UserEntity> GetByUserNameAsync(string userName) => _db.Find(x => x.UserName == userName).FirstOrDefaultAsync();
 
-        public Task UpdateUserEntityAsync(string userName, UserEntity entity)
-        {
-            throw new NotImplementedException();
-        }
+        public Task UpdateUserEntityAsync(string userName, UserEntity entity) => _db.ReplaceOneAsync(x => x.UserName == userName, entity);
     }
 }
