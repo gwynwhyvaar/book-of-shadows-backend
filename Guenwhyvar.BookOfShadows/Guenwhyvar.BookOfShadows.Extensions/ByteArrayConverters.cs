@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Guenwhyvar.BookOfShadows.Extensions
+﻿namespace Guenwhyvar.BookOfShadows.Extensions
 {
-    internal class ByteArrayConverters
+    public static class ByteArrayConverters
     {
+        public static byte[] GetByteArray(this string inputString) => System.Text.Encoding.UTF8.GetBytes(inputString);
+        public static string GetStringFromByteArray(this byte[] data) => System.Text.Encoding.UTF8.GetString(data);
     }
 }
