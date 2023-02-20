@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guenwhyvar.BookOfShadows.NoSql.Entities", "Guenwhyvar.BookOfShadows.NoSql.Entities\Guenwhyvar.BookOfShadows.NoSql.Entities.csproj", "{6A74A63A-9B9D-47D2-9615-41C76DCE26C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guenwhyvar.BookOfShadows.NoSql", "Guenwhyvar.BookOfShadows.NoSql\Guenwhyvar.BookOfShadows.NoSql.csproj", "{8719F86F-9D01-47CD-A9CA-0462B2ABF784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guenwhyvar.BookOfShadows.NoSql", "Guenwhyvar.BookOfShadows.NoSql\Guenwhyvar.BookOfShadows.NoSql.csproj", "{8719F86F-9D01-47CD-A9CA-0462B2ABF784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guenwhyvar.BookOfShadows.Extensions", "Guenwhyvar.BookOfShadows.Extensions\Guenwhyvar.BookOfShadows.Extensions.csproj", "{766FDB67-B471-4242-8128-A64B68CD20A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8719F86F-9D01-47CD-A9CA-0462B2ABF784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8719F86F-9D01-47CD-A9CA-0462B2ABF784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8719F86F-9D01-47CD-A9CA-0462B2ABF784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766FDB67-B471-4242-8128-A64B68CD20A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766FDB67-B471-4242-8128-A64B68CD20A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766FDB67-B471-4242-8128-A64B68CD20A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766FDB67-B471-4242-8128-A64B68CD20A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
