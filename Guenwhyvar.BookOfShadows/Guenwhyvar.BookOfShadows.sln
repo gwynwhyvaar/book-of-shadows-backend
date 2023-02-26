@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guenwhyvar.BookOfShadows.Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guenwhyvar.BookOfShadows.Domains", "Guenwhyvar.BookOfShadows.Domains\Guenwhyvar.BookOfShadows.Domains.csproj", "{B406F559-5AB4-4623-B46D-2874330B3361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guenwhyvar.BookOfShadows.Smtp", "Guenwhyvar.BookOfShadows.Smtp\Guenwhyvar.BookOfShadows.Smtp.csproj", "{C97B1A03-4A11-4BFC-9D1F-124449AC6F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guenwhyvar.BookOfShadows.Smtp", "Guenwhyvar.BookOfShadows.Smtp\Guenwhyvar.BookOfShadows.Smtp.csproj", "{C97B1A03-4A11-4BFC-9D1F-124449AC6F76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guenwhyvar.BookOfShadows.Shared", "Guenwhyvar.BookOfShadows.Shared\Guenwhyvar.BookOfShadows.Shared.csproj", "{568E59D4-562F-4FC9-AE05-4B959827DD03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C97B1A03-4A11-4BFC-9D1F-124449AC6F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C97B1A03-4A11-4BFC-9D1F-124449AC6F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C97B1A03-4A11-4BFC-9D1F-124449AC6F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{568E59D4-562F-4FC9-AE05-4B959827DD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568E59D4-562F-4FC9-AE05-4B959827DD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568E59D4-562F-4FC9-AE05-4B959827DD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568E59D4-562F-4FC9-AE05-4B959827DD03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
