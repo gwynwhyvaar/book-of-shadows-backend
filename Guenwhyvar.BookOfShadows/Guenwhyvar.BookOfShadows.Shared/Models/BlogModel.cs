@@ -1,8 +1,11 @@
 ﻿#nullable disable  
 using Guenwhyvar.BookOfShadows.Shared.Enums;
 
+using MessagePack;
+
 namespace Guenwhyvar.BookOfShadows.Shared.Models
 {
+    [MessagePackObject(keyAsPropertyName: true)]
     public class BlogModel : BaseModel
     {
         public string Title { get; set; }
