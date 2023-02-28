@@ -7,10 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Guenwhyvar.BookOfShadows.NoSql.Entities\Guenwhyvar.BookOfShadows.NoSql.Entities.csproj" />
+    <ProjectReference Include="..\Guenwhyvar.BookOfShadows.NoSql\Guenwhyvar.BookOfShadows.NoSql.csproj" />
     <ProjectReference Include="..\Guenwhyvar.BookOfShadows.Shared\Guenwhyvar.BookOfShadows.Shared.csproj" />
   </ItemGroup>
 

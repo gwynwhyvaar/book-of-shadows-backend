@@ -5,6 +5,5 @@
         Active = 0,
         Deleted = 1,
         InActive = 2,
-        PendingVerification = 3
     }
 }

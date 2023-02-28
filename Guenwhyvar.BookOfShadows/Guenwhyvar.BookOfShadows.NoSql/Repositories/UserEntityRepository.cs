@@ -19,8 +19,6 @@ namespace Guenwhyvar.BookOfShadows.NoSql.Repositories
 
         public Task<UserEntity> GetByUserBySelfUrlAsync(string selfUrl) => _db.Find(x => x.SelfUrl == selfUrl).FirstOrDefaultAsync();
 
-        public Task<UserEntity> GetByUserNameAndPasswordAsync(string userName, byte[] password) => _db.Find(x => x.UserName == userName && x.Password == password).FirstOrDefaultAsync();
-
         public Task<UserEntity> GetByUserNameAsync(string userName) => _db.Find(x => x.UserName == userName).FirstOrDefaultAsync();
 
         public Task UpdateUserEntityAsync(string userName, UserEntity entity) => _db.ReplaceOneAsync(x => x.UserName == userName, entity);

@@ -12,7 +12,6 @@ namespace Guenwhyvar.BookOfShadows.Shared.Models
         public string MiddleName { get; set; }
         public string DisplayName { get; set; }
         public string EmailAddress { get; set; }
-        public byte[] Password { get; set; }
         public string ProfilePictureUrl { get; set; }
         public int Blogs { get; set; }
         public int Comics { get; set; }
