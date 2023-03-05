@@ -8,7 +8,7 @@ namespace Guenwhyvar.BookOfShadows.NoSql.Abstract
         Task<BlogEntity> GetBlogEntityBySelfUrlAsync(string selfUlr);
         Task<List<BlogEntity>> GetAllBlogEntitiesAsync(string tag);
         Task<List<BlogEntity>> GetAllBlogEntitiesAsync(string tag, string userName);
-        Task AddBlogEntity(BlogEntity blogEntity);
+        Task AddBlogEntityAsync(BlogEntity blogEntity);
         Task DeleteBlogEntityAsync(string blogId);
         Task UpdateBlogEntityAsync(string blogId, BlogEntity blogEntity);
         Task<List<BlogEntity>> GetAllBlogEntitiesByUserNameAsync(string userName);

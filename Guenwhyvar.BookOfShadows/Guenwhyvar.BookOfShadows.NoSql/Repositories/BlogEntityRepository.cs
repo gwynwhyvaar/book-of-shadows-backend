@@ -14,7 +14,7 @@ namespace Guenwhyvar.BookOfShadows.NoSql.Repositories
             var dataBase = new MongoClient(databaseSettings.ConnectionString).GetDatabase(databaseSettings.DatabaseName);
             _db = dataBase.GetCollection<BlogEntity>(typeof(BlogEntity).FullName);
         }
-        public Task AddBlogEntity(BlogEntity blogEntity) => _db.InsertOneAsync(blogEntity);
+        public Task AddBlogEntityAsync(BlogEntity blogEntity) => _db.InsertOneAsync(blogEntity);
         public Task DeleteBlogEntityAsync(string blogId) => _db.DeleteOneAsync(x => x.DocumentUuid == new Guid(blogId));
         public Task<List<BlogEntity>> GetAllBlogEntitiesAsync(string tag) => _db.Find(x => x.Tag == tag).ToListAsync();
         public Task<List<BlogEntity>> GetAllBlogEntitiesAsync(string tag, string userName) => _db.Find(x => x.Tag == tag && x.BlogOwnerId == userName).ToListAsync();

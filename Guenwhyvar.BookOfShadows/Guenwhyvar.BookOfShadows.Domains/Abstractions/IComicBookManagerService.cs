@@ -2,7 +2,7 @@
 
 namespace Guenwhyvar.BookOfShadows.Domains.Abstractions
 {
-    public interface IComicBookService
+    public interface IComicBookManagerService
     {
         Task SaveComicAsync(ComicModel comicModel);
         Task EditComicAsync(ComicModel comicModel);
